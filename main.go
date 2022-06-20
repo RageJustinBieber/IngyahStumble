@@ -45,7 +45,7 @@ func parseResponse(text string) {
     username := strings.Split(text, `"Username":`)[1]
     username = strings.Split(username, ",")[0]
 
-    fmt.Printf("\rUsername : %s | Trophy : %s | Crown : %s", username, trophy, crown)
+    fmt.Printf("\rUsername : % | Trophy : % | Crown : %", username, trophy, crown)
 }
 
 func requestWithHeader(url string, token string) {
@@ -65,10 +65,10 @@ func requestWithHeader(url string, token string) {
         parseResponse(string(body))
     }
     if res.StatusCode == 401 {
-      fmt.Printf("\n[401] Failed Maybe Auth Key Expired Or Wrong?")
+      fmt.Printf("\n[401] Auth Code Telah Expired/Tidak Valdi")
     }
 	if res.StatusCode == 403 {
-		fmt.Printf("\n[403] Your Account Has Ben Banned From Server")
+		fmt.Printf("\n[403] Your Account Got Banned/Blockir! Kasihan")
 	}
 	if res.StatusCode == 501 {
 		fmt.Printf("\n[501] Failed")
@@ -77,13 +77,13 @@ func requestWithHeader(url string, token string) {
 
 func main() {
 	fmt.Printf("Simple Stumble Duplicate Crown & Tropy")
-	fmt.Printf("\nThis Tools Made By Ryns And Recoded By iSholved!")
-	fmt.Printf("\nReference : Revan AR, KipasGTS, NixSey, GalvinLoL")
-	fmt.Printf("\nThanks To : Nevolutions Reborn Team For Support!")
+	fmt.Printf("\nThis Tools Made By Rexxy!")
+	fmt.Printf("\nReference : Alvin")
+	fmt.Printf("\nThanks To : Vodiag Team for supports !")
 
-	fmt.Printf("\n\n\n╔═╗╔╦╗╦ ╦╔╦╗╔╗ ╦  ╔═╗  ╔╦╗╦ ╦╔═╗╦  ╦╔═╗╔═╗╔╦╗╔═╗\n")
-	fmt.Printf("╚═╗ ║ ║ ║║║║╠╩╗║  ║╣    ║║║ ║╠═╝║  ║║  ╠═╣ ║ ║╣ \n")
-	fmt.Printf("╚═╝ ╩ ╚═╝╩ ╩╚═╝╩═╝╚═╝  ═╩╝╚═╝╩  ╩═╝╩╚═╝╩ ╩ ╩ ╚═╝")
+	fmt.Printf("\n\n\nSIMPEL SCRIPT\n")
+	fmt.Printf("SIMPLE SCRIPT \n")
+	fmt.Printf("SIMPLE SCRIPT╝")
 
 	round := input("\n\n 0. Eleminated \n1. Round 1\n2. Round 2\n3. Round(Winner) 3\n Input Your Round: ")
     token := input("Enter your authorization: ")
